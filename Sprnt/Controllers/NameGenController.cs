@@ -13,7 +13,7 @@ namespace Sprinter.Controllers
 {
     public class NameGenController : Controller
     {
-        public async Task<ActionResult> Index()
+        public ActionResult Index()
         {
             return View();
         }
