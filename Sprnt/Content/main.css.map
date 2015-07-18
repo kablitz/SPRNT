@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEC,kBAAU;EACT,aAAa,EAAE,iBAAiB;EAChC,UAAU,EAAE,KAAK;EACjB,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,OAAO;EAEd,oBAAE;IACD,KAAK,EAAE,OAAO;EAGf,sDAAiB;IAChB,eAAe,EAAE,OAAO;AAI1B,uBAAe;EACd,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,KAAK;EACjB,SAAS,EAAE,IAAI",
+"sources": ["scss/_namegen.scss"],
+"names": [],
+"file": "main.css"
+}

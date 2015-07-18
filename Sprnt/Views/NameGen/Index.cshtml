@@ -1,0 +1,75 @@
+﻿@model Sprinter.ViewModel.NameGenViewModel
+@{
+    ViewBag.Title = "Sprint Name Generator";
+}
+
+<div id="namegen">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">... <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    @foreach (var x in Enum.GetValues(typeof(Sprinter.Enums.WordType)))
+                    {
+                       <li><a href="#">@x.ToString()</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">... <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    @foreach (var x in Enum.GetValues(typeof(Sprinter.Enums.WordType)))
+                    {
+                       <li><a href="#">@x.ToString()</a></li>
+                    }
+                </ul> 
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">... <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    @foreach (var x in Enum.GetValues(typeof(Sprinter.Enums.WordType)))
+                    {
+                       <li><a href="#">@x.ToString()</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <a id="btnAdd" href="#" class="btn btn-primary btn-lg">Large button</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(".dropdown-menu > li > a").on('click', function () {
+            $(this).parent().parent().parent().find('.dropdown-toggle').text($(this).text());
+        });
+
+        $("#btnAdd").on('click', function (e) {
+            e.preventDefault();
+
+            $.ajax({
+                type: "POST",
+                url: "NameGen/AddWord",
+                contentType: "application/json",
+                success: successFunc,
+                error: errorFunc
+            });
+        });
+
+        function successFunc(data, status) {
+            alert(data);
+        }
+
+        function errorFunc() {
+            alert('error');
+        }
+    </script>
+}

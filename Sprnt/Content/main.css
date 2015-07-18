@@ -1,0 +1,15 @@
+#namegen .dropdown {
+  border-bottom: 3px solid #2c3e50;
+  text-align: right;
+  font-size: 60px;
+  color: #2c3e50; }
+  #namegen .dropdown a {
+    color: #2c3e50; }
+  #namegen .dropdown a:hover, #namegen .dropdown a:focus {
+    text-decoration: initial; }
+#namegen .dropdown-menu {
+  min-width: 100%;
+  text-align: right;
+  font-size: 60px; }
+
+/*# sourceMappingURL=main.css.map */

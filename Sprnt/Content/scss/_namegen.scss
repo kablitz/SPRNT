@@ -1,0 +1,23 @@
+#namegen
+{
+	.dropdown {
+		border-bottom: 3px solid #2c3e50;
+		text-align: right;
+		font-size: 60px;
+		color: #2c3e50;
+
+		a {
+			color: #2c3e50;
+		}
+
+		a:hover, a:focus {
+			text-decoration: initial;
+		}
+	}
+
+	.dropdown-menu {
+		min-width: 100%;
+		text-align: right;
+		font-size: 60px;
+	}
+}
