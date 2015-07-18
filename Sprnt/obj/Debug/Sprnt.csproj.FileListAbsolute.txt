@@ -33,6 +33,9 @@ C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\Sprinter.
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\Antlr3.Runtime.dll
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\EntityFramework.dll
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\MongoDB.Bson.dll
+C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\MongoDB.Driver.Core.dll
+C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\MongoDB.Driver.dll
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\Newtonsoft.Json.dll
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\System.Net.Http.Formatting.dll
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\System.Web.Http.dll
@@ -45,6 +48,8 @@ C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\System.We
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\System.Web.WebPages.dll
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\System.Web.WebPages.Razor.dll
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\WebGrease.dll
+C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\MongoDB.Bson.xml
+C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\MongoDB.Driver.xml
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\EntityFramework.xml
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\Newtonsoft.Json.xml
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\System.Net.Http.Formatting.xml
@@ -57,9 +62,3 @@ C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\System.We
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\System.Web.WebPages.Razor.xml
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\obj\Debug\Sprinter.dll
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\obj\Debug\Sprinter.pdb
-C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\obj\Debug\Sprnt.csprojResolveAssemblyReference.cache
-C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\MongoDB.Bson.dll
-C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\MongoDB.Driver.Core.dll
-C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\MongoDB.Driver.dll
-C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\MongoDB.Bson.xml
-C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\MongoDB.Driver.xml
