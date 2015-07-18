@@ -62,3 +62,4 @@ C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\System.We
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\bin\System.Web.WebPages.Razor.xml
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\obj\Debug\Sprinter.dll
 C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\obj\Debug\Sprinter.pdb
+C:\Users\kablitz\Documents\Visual Studio 2012\Projects\Sprnt\Sprnt\obj\Debug\Sprnt.csprojResolveAssemblyReference.cache
