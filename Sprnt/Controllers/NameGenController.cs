@@ -9,12 +9,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Sprinter.ViewModel;
 
 namespace Sprinter.Controllers
 {
     public class NameGenController : Controller
     {
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult Index(NameGenViewModel viewModel)
         {
             return View();
         }

@@ -1,14 +1,58 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace Sprinter.Enums
+﻿namespace Sprinter.Enums
 {
     public enum Adjective
     {
         Nefarious,
         Gentlemanly,
-        Derpy
+        Derpy,
+        Bamboozled,
+        Cantankerous,
+        Fungible,
+        Busy,
+        Lazy,
+        Careless,	
+        Clumsy,
+        Nimble,
+        Brave,
+        Mighty,
+        Meek,
+        Clever,
+        Dull,
+        Afraid,
+        Scared,
+        Cowardly,	
+        Bashful	,
+        Happy,
+        Cheerful,	
+        Joyful	,
+        Carefree,	
+        Friendly,	
+        Moody,
+        Crabby,
+        Cranky,
+        Awful,
+        Gloomy,
+        Angry,
+        Worried,
+        Excited,
+        Creepy,
+        Flexible,
+        Sloppy,	
+        Messy,
+        Slimy,
+        Grimy,
+        Crispy,	
+        Spiky,	
+        Rusty,	
+        Smelly,
+        Foul,
+        Stinky,
+        Sassy,
+        Puny,
+        Sleepy,
+        Flamboyant,
+        Lumpy,
+        Stiff,
+        Sparkling,
     }
 }
