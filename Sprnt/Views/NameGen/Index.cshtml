@@ -4,64 +4,72 @@
 }
 
 <div id="namegen">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">... <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    @foreach (var x in Enum.GetValues(typeof(Sprinter.Enums.WordType)))
-                    {
-                       <li><a href="#">@x.ToString()</a></li>
-                    }
-                </ul>
+    @using (Html.BeginForm("Index", "NameGen"))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1>@Model.Name</h1>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">... <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    @foreach (var x in Enum.GetValues(typeof(Sprinter.Enums.WordType)))
-                    {
-                       <li><a href="#">@x.ToString()</a></li>
-                    }
-                </ul> 
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">@Model.FirstWord <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        @foreach (var x in Enum.GetValues(typeof(Sprinter.Enums.WordType)))
+                        {
+                           <li><a href="#">@x.ToString()</a></li>
+                        }
+                    </ul>
+                    @Html.HiddenFor(x => x.FirstWord)
+                </div>
+                @Html.ValidationMessageFor(x => x.FirstWord)
+            </div>
+            <div class="col-md-4">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">@Model.SecondWord <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        @foreach (var x in Enum.GetValues(typeof(Sprinter.Enums.WordType)))
+                        {
+                           <li><a href="#">@x.ToString()</a></li>
+                        }
+                    </ul> 
+                    @Html.HiddenFor(x => x.SecondWord)
+                </div>
+                @Html.ValidationMessageFor(x => x.SecondWord)
+            </div>
+            <div class="col-md-4">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">@Model.ThirdWord <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        @foreach (var x in Enum.GetValues(typeof(Sprinter.Enums.WordType)))
+                        {
+                           <li><a href="#">@x.ToString()</a></li>
+                        }
+                    </ul>
+                    @Html.HiddenFor(x => x.ThirdWord)
+                </div>
+                @Html.ValidationMessageFor(x => x.ThirdWord)
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">... <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    @foreach (var x in Enum.GetValues(typeof(Sprinter.Enums.WordType)))
-                    {
-                       <li><a href="#">@x.ToString()</a></li>
-                    }
-                </ul>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <input id="btnGetName" type="submit" class="btn btn-primary btn-lg" value="Get Your Sprint Name" />
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <a id="btnAdd" href="#" class="btn btn-primary btn-lg">Add</a>
-        </div>
-    </div>
+    }
 </div>
 
 @section Scripts {
     <script type="text/javascript">
         $(".dropdown-menu > li > a").on('click', function () {
             $(this).parent().parent().parent().find('.dropdown-toggle').text($(this).text());
-        });
 
-        $("#btnAdd").on('click', function (e) {
-            e.preventDefault();
-
-            $.ajax({
-                type: "POST",
-                url: "NameGen/AddWord",
-                contentType: "application/json",
-                success: successFunc,
-                error: errorFunc
-            });
+            $(this).parent().parent().parent().find('input[type=hidden]').val($(this).text());
         });
 
         function successFunc(data, status) {

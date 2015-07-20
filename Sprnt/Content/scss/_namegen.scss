@@ -1,12 +1,21 @@
 #namegen
 {
+	#btnGetName {
+		margin: 0 auto;
+		display: block;
+	}
+
+	.row {
+		margin: 0 auto 50px auto;
+	}
+
 	.dropdown {
 		border-bottom: 3px solid #2c3e50;
 		text-align: right;
 		font-size: 60px;
 		color: #2c3e50;
 
-		a {
+		> a {
 			color: #2c3e50;
 		}
 

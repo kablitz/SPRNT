@@ -10,19 +10,44 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Sprinter.ViewModel;
+using Sprinter.Helpers;
 
 namespace Sprinter.Controllers
 {
     public class NameGenController : Controller
     {
+        private Random _rndNoun;
+        private Random _rndAdjective;
+        private Random _rndVerb;
+
         public ActionResult Index()
         {
-            return View();
+            return View(new NameGenViewModel());
         }
 
+        [HttpPost]
         public ActionResult Index(NameGenViewModel viewModel)
         {
-            return View();
+            if (!ModelState.IsValid)
+                return View(viewModel);
+
+            _rndNoun = new Random();
+            _rndAdjective = new Random();
+            _rndVerb = new Random();
+
+            var sprintName = string.Empty;
+
+            var firstWordType = EnumUtil.ParseEnum<WordType>(viewModel.FirstWord);
+            var secondWordType = EnumUtil.ParseEnum<WordType>(viewModel.SecondWord);
+            var thirdWordType = EnumUtil.ParseEnum<WordType>(viewModel.ThirdWord);
+
+            sprintName += GetWord(firstWordType) + " ";
+            sprintName += GetWord(secondWordType) + " ";
+            sprintName += GetWord(thirdWordType);
+
+            viewModel.Name = sprintName;
+
+            return View(viewModel);
         }
 
         [HttpPost]
@@ -56,16 +81,27 @@ namespace Sprinter.Controllers
             return Json("success", JsonRequestBehavior.AllowGet);
         }
 
-        private int RandomEnumIndex<T>(T en) where T : IComparable, IFormattable, IConvertible
+        private string GetWord(WordType type)
         {
-            if (!typeof(T).IsEnum)
-                throw new ArgumentException("en must be enum type");
+            switch (type)
+            {
+                case WordType.Verb:
+                    
+                    var verbCcount = Enum.GetNames(typeof(Verb)).Length;
+                    return ((Verb)_rndNoun.Next(0, verbCcount)).ToReadable();
 
-            var count = Enum.GetNames(typeof(T)).Length;
+                case WordType.Adjective:
 
-            Random rnd = new Random();
-            
-            return rnd.Next(0, count);
+                    var adjectiveCount = Enum.GetNames(typeof(Adjective)).Length;
+                    return ((Adjective)_rndAdjective.Next(0, adjectiveCount)).ToReadable();
+
+                case WordType.Noun:
+                    var nounCount = Enum.GetNames(typeof(Noun)).Length;
+                    return ((Noun)_rndVerb.Next(0, nounCount)).ToReadable();
+                
+                default:
+                    return string.Empty;
+            }
         }
     }
 }

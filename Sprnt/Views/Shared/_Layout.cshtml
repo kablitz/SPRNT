@@ -54,12 +54,15 @@
         </nav>
         </div>
     </div>
-    
-    <div class="main-content container">
-        @RenderBody()
+
+    <div class="content">
+        <div class="main-content container">
+            @RenderBody()
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

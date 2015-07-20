@@ -1,6 +1,7 @@
 ﻿using Sprinter.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -8,8 +9,15 @@ namespace Sprinter.ViewModel
 {
     public class NameGenViewModel
     {
-        public WordType Type1 { get; set; }
-        public WordType Type2 { get; set; }
-        public WordType Type3 { get; set; }
+        [Required]
+        public string FirstWord { get; set; }
+
+        [Required]
+        public string SecondWord { get; set; }
+
+        [Required]
+        public string ThirdWord { get; set; }
+
+        public string Name { get; set; }
     }
 }
