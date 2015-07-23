@@ -10,6 +10,9 @@ namespace Sprinter.Enums
         Punching,
         Kicking,
         Eating,
-        Busted
+        Kissing,
+        Hiding,
+        Cooking,
+        Throwing,
     }
 }

@@ -74,6 +74,17 @@
         Badonkadonk,
         KillerTomato,
         Pikachu,
-        Diglett
+        Diglett,
+        SuperMario,
+        Obama,
+        Senpai,
+        SpongbobSquarepants,
+        Batman,
+        KobeBryant,
+        Walrus,
+        Nemo,
+        Farts,
+        Porridge,
+        Hulk
     }
 }
