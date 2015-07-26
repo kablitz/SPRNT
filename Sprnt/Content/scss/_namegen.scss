@@ -5,8 +5,20 @@
 		display: block;
 	}
 
+	h1 {
+		text-align: center;
+		font-size: 60px;
+	}
+
 	.row {
 		margin: 0 auto 50px auto;
+	}
+
+	input.underlined
+	{
+		border:0;
+		border-bottom:solid 1px #000;
+		outline:none; /* prevents textbox highlight in chrome */
 	}
 
 	.dropdown {
@@ -28,5 +40,21 @@
 		min-width: 100%;
 		text-align: right;
 		font-size: 60px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	h1 {
+		font-size: 40px;
+	}
+
+    #namegen {
+		.dropdown {
+			font-size: 40px;
+		}
+
+	.dropdown-menu {
+			font-size: 40px;
+		}
 	}
 }

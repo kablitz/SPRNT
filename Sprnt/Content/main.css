@@ -1,8 +1,22 @@
+.content {
+  padding-top: 150px; }
+
+.navbar {
+  padding: 0 15px; }
+
 #namegen #btnGetName {
   margin: 0 auto;
   display: block; }
+#namegen h1 {
+  text-align: center;
+  font-size: 60px; }
 #namegen .row {
   margin: 0 auto 50px auto; }
+#namegen input.underlined {
+  border: 0;
+  border-bottom: solid 1px #000;
+  outline: none;
+  /* prevents textbox highlight in chrome */ }
 #namegen .dropdown {
   border-bottom: 3px solid #2c3e50;
   text-align: right;
@@ -16,5 +30,14 @@
   min-width: 100%;
   text-align: right;
   font-size: 60px; }
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px; }
+
+  #namegen .dropdown {
+    font-size: 40px; }
+  #namegen .dropdown-menu {
+    font-size: 40px; } }
 
 /*# sourceMappingURL=main.css.map */

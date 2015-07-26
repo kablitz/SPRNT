@@ -9,13 +9,13 @@ namespace Sprinter.ViewModel
 {
     public class NameGenViewModel
     {
-        [Required]
+        [Required(ErrorMessage="First word type is required.")]
         public string FirstWord { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Second word type is required.")]
         public string SecondWord { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Third word type is required.")]
         public string ThirdWord { get; set; }
 
         public string Name { get; set; }
