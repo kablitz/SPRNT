@@ -11,11 +11,15 @@ using System.Web;
 using System.Web.Mvc;
 using Sprinter.ViewModel;
 using Sprinter.Helpers;
+using System.Configuration;
 
 namespace Sprinter.Controllers
 {
     public class NameGenController : Controller
     {
+        string _connection = ConfigurationManager.ConnectionStrings["MongoDB"].ConnectionString;
+        string _database = ConfigurationManager.AppSettings["MongoDBName"];
+
         private Random _rndNoun;
         private Random _rndAdjective;
         private Random _rndVerb;
@@ -53,11 +57,8 @@ namespace Sprinter.Controllers
         [HttpPost]
         public async Task<ActionResult> AddWord()
         {
-            string uri = "mongodb://vsebastian:password101@ds047812.mongolab.com:47812/appharbor_vh0wnjnb";
-
-            //MongoUrl mongoUrl = new MongoUrl(uri);
-            var client = new MongoClient(uri);
-            var db = client.GetDatabase("appharbor_vh0wnjnb");
+            var client = new MongoClient(_connection);
+            var db = client.GetDatabase(_database);
 
             var words = db.GetCollection<BsonDocument>("Word");
 
